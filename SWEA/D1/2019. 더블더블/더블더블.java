@@ -36,14 +36,13 @@ class Solution
 {
 	public static void main(String args[]) throws Exception
 	{
-				Scanner scanner = new Scanner(System.in);
+
+		Scanner scanner = new Scanner(System.in);
 		int n = scanner.nextInt();
-		int x = 1;
 		
-		System.out.print(x+" ");
-		for(int i=1; i<=n;i++) {
-			x *=2;
-			System.out.print(x+" ");
+		System.out.print(1+" ");
+		for(int i=1; i<=n; i++) {
+			System.out.print((int)(Math.pow(2,i))+" ");
+		}
 		}	
 	}
-}
