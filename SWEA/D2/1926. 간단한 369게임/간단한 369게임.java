@@ -36,30 +36,18 @@ class Solution
 {
 	public static void main(String args[]) throws Exception
 	{
-
 		Scanner scanner = new Scanner(System.in);
 		
-		int N = scanner.nextInt(); // 과목의 개수
+		int N = scanner.nextInt(); 
 		
 		for(int i=1;i<=N;i++) {
-			if(i<10 && i>0) {
-				if(i%3==0) {
-					System.out.print("- ");
-				} else {
-					System.out.print(i+" ");
-				}
-			} // 10이하 if문 
-			
-			
-			if(i>=10) {
-				int A = i/10; //십의 자리
-				int B = i%10; //일의 자리
+			int A = i/10; //십의 자리
+			int B = i%10; //일의 자리
 				if((A==3 || A==6 || A==9) && (B==3 || B==6 || B==9)) {
 					System.out.print("-- ");
-				} else if (A%3==0 || B==3 || B==6 || B==9) {
+				} else if ((A==3 || A==6 || A==9) || (B==3 || B==6 || B==9)) {
 					System.out.print("- ");
 				} else { System.out.print(i+" ");
-				}
 			}
 		}
 	}
